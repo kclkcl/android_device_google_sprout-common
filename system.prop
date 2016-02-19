@@ -4,6 +4,8 @@
 rild.libpath=/system/lib/mtk-ril.so
 rild.libargs=-d /dev/ttyC0
 
+#this is a sprout
+ro.product.device=sprout
 
 # MTK, Infinity, 20090720 {
 wifi.interface=wlan0
