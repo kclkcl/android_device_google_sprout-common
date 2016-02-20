@@ -3,7 +3,7 @@ type nvram_daemon_exec, exec_type, file_type;
 
 init_daemon_domain(nvram_daemon)
 allow nvram_daemon nvram_daemon_exec:file { read open getattr execute execute_no_trans};
-allow nvram_daemon block_device:dir { search }
+allow nvram_daemon block_device:dir search;
 allow nvram_daemon nvram_data_file:dir { create add_name read write getattr setattr search };
 allow nvram_daemon nvram_data_file:file { create open read write getattr setattr };
 allow nvram_daemon nvram_device:blk_file { open read write getattr };
