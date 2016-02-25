@@ -609,14 +609,6 @@ service start_modem /system/bin/md_ctrl 1
 service mobile_log_d /system/bin/mobile_log_d
     class main
 
-# bugreport is triggered by holding down volume down, volume up and power
-service bugreport /system/bin/dumpstate -d -p -B \
-        -o /data/data/com.android.shell/files/bugreports/bugreport
-    class main
-    disabled
-    oneshot
-    keycodes 114 115 116
-
 service netdiag /system/bin/netdiag
     class main
     socket netdiag stream 0660 root inet
